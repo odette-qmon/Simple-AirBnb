@@ -1,9 +1,12 @@
+<nav>
+  <%= link_to 'Add a new flat', new_flat_path %>
+</nav>
 <div class="container">
   <h1>All our flats:</h1>
     <% @flats.each do |flat| %>
       <div class="card">
         <h4>
-          <%= flat.name %>
+          <%= link_to flat.name, flat_path(flat) %>
         </h4>
         <p>
           <%= flat.address %>
